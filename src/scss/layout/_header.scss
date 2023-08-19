@@ -1,0 +1,84 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header {
+  position: absolute;
+    background-color: v.$verde;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 100%;
+    &.fijo {
+      position: fixed;
+      box-shadow: 0 3px 9px hsla(0, 0%, 8%, 0.493);
+      animation: slide-down 0.7s;
+    }
+    @keyframes slide-down {
+      0% {
+        transform: translateY(-100%);
+      }
+    
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .contenido__header {
+      height: 6rem;
+      display: flex;
+      justify-content: center;
+      @include m.tablet {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 6rem;
+      }
+    }
+    
+  .logo {
+    color: v.$blanco;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: v.$fw_700;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    @include m.tablet {
+        margin: 0;
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+}
+
+
+
+.navegacion {
+    column-gap: 2rem;
+    display: flex;
+    align-items: center;
+  @include m.tablet {
+    display: flex;
+    column-gap: 2rem;
+  }
+  .nav__link{
+    display: block;
+    text-align: center;
+    color: v.$blanco;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    @include m.tablet {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+      color: v.$amarillo;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .active-link{
+    color: v.$amarillo;
+  }
+}

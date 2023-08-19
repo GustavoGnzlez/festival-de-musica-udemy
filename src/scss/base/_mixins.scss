@@ -1,0 +1,65 @@
+@use 'variables' as v;
+
+//Media Query Min-Width
+@mixin phone {
+    @media screen and (min-width: v.$phone) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+@mixin desktopXL {
+    @media screen and (min-width: v.$desktopXL) {
+        @content;
+    }
+}
+
+//Media Query Max-Width
+@mixin maxPhone {
+    @media screen and (max-width: v.$maxPhone) {
+        @content;
+    }
+}
+
+@mixin maxTablet {
+    @media screen and (max-width: v.$maxTablet) {
+        @content;
+    }
+}
+
+@mixin maxDesktop {
+    @media screen and (max-width: v.$maxDesktop) {
+        @content;
+    }
+}
+
+@mixin maxDesktopXL {
+    @media screen and (max-width: v.$maxDesktopXL) {
+        @content;
+    }
+}
+
+//Grid
+@mixin grid($columnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+}
+
+//Resetear listas 
+@mixin resetList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

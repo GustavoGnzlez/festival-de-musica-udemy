@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock & EDM Festival</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    <header class="header">
+        <!-- HEADER | NAVEGACIÓN -->
+        <div class="contenedor contenido__header">
+            <a href="#" class="logo">Rock & EDM Festival</a>
+            
+            <nav class="navegacion">
+                <a href="#lineup" class="nav__link active-link">Line Up</a>
+                <a href="#galeria" class="nav__link">Galería</a>
+                <a href="#boletos" class="nav__link">Boletos</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="video">
+      <!-- VIDEOS -->
+      <video autoplay muted loop>
+          <source src="video/concierto.mp4" type="video/mp4">
+          <source src="video/concierto.ogg" type="video/ogg">
+          <source src="video/concierto.webm" type="video/webm">
+      </video>
+        <div class="overlay">
+            <div class="contenedor contenido__video">
+                <h2 class="contenido__titutlo">Rock & EDM Festival</h2>
+                <p class="fecha__titulo">Agosto 2023, Santiago, Chile</p>
+            </div>
+          </div>
+    </div>
+
+    <section class="contenedor sobre__festival section">
+        <div class="imagen">
+            <picture>
+                <source srcset="build/img/imagen_vocalista.avif" type="image/avif">
+                <source srcset="build/img/imagen_vocalista.webp" type="image/webp">
+                <img loading="lazy" width="200" height="300" src="build/img/imagen_vocalista.jpg" alt="Imagen vocalista">
+            </picture>
+        </div>
+        <div class="contenido__festival">
+            <h2 class="titulo__festival">Rock & EDM Festival</h2>
+            <p class="fecha__festival">Agosto 22, Santiago, Chile.</p>
+            <p class="descripcion__festival">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dolorum quam exercitationem quaerat voluptatibus officia iure blanditiis ad! Itaque, aspernatur! Ipsam ullam facilis magnam porro distinctio qui recusandae corrupti animi?</p>
+        </div>
+    </section> <!--.sobre__festival-->
+
+    <section id="lineup" class="section line__up">
+        <h3 class="titulo__lineup">Line Up</h3>
+        <p class="fecha__lineup">Viernes 21</p>
+        <div class="contenedor escenarios__contenedor">
+            <div class="escenario rock bg-amarillo">
+                <p class="nombre__escenario">Escenario Rock</p>
+                <ul class="calendario">
+                    <li>24:00 | <span>Deadmau4</span></li>
+                    <li>22:00 | <span>Tïesto</span></li>
+                    <li>20:00 | <span>Hardwell</span></li>
+                    <li>19:00 | <span>Dash Berlin</span></li>
+                    <li>18:00 | <span>Fedde Legrand</span></li>
+                    <li>17:00 | <span>Audien</span></li>
+                </ul>
+            </div><!--.escenario-->
+
+            <div class="escenario edm bg-verde">
+                <p class="nombre__escenario">Escenario Rock</p>
+                <ul class="calendario">
+                    <li>24:00 | <span>Deadmau4</span></li>
+                    <li>22:00 | <span>Tïesto</span></li>
+                    <li>20:00 | <span>Hardwell</span></li>
+                    <li>19:00 | <span>Dash Berlin</span></li>
+                    <li>18:00 | <span>Fedde Legrand</span></li>
+                    <li>17:00 | <span>Audien</span></li>
+                </ul>
+            </div>
+
+        </div><!--.escenarios__contenedor-->
+
+        <p class="fecha__lineup">Sábado 22</p>
+        <div class="contenedor escenarios__contenedor">
+            <div class="escenario rock bg-verde">
+                <p class="nombre__escenario">Escenario Rock</p>
+                <ul class="calendario">
+                    <li>24:00 | <span>Deadmau4</span></li>
+                    <li>22:00 | <span>Tïesto</span></li>
+                    <li>20:00 | <span>Hardwell</span></li>
+                    <li>19:00 | <span>Dash Berlin</span></li>
+                    <li>18:00 | <span>Fedde Legrand</span></li>
+                    <li>17:00 | <span>Audien</span></li>
+                </ul>
+            </div><!--.escenario-->
+
+            <div class="escenario edm bg-amarillo">
+                <p class="nombre__escenario">Escenario Rock</p>
+                <ul class="calendario">
+                    <li>24:00 | <span>Deadmau4</span></li>
+                    <li>22:00 | <span>Tïesto</span></li>
+                    <li>20:00 | <span>Hardwell</span></li>
+                    <li>19:00 | <span>Dash Berlin</span></li>
+                    <li>18:00 | <span>Fedde Legrand</span></li>
+                    <li>17:00 | <span>Audien</span></li>
+                </ul>
+            </div>
+
+        </div><!--.escenarios__contenedor-->
+    </section>
+
+    <section id="galeria" class="galeria">
+        <h3>Galería</h3>
+        <div class="contenedor">
+          <ul class="galeria__imagenes"></ul>
+        </div>
+    </section>
+
+    <section id="boletos" class="boletos section bg-verde">
+        <h3>Boletos</h3>
+  
+        <div class="contenedor contenedor__boletos">
+          <div class="basico pase">
+            <p class="nombre__pase">Pase 1 día</p>
+  
+            <header class="pase__header">
+              <p>Incluye</p>
+            </header>
+            <div class="pase__body">
+              <ul>
+                <li>Acceso a ambos escenarios</li>
+                <li>Comida y Bebida</li>
+              </ul>
+            </div>
+  
+            <footer class="pase__footer">
+              <p>$100</p>
+            </footer>
+          </div>
+  
+          <div class="premium pase">
+            <p class="nombre__pase">Pase 2 días</p>
+  
+            <header class="pase__header">
+              <p>Incluye</p>
+            </header>
+            <div class="pase__body">
+              <ul>
+                <li>Acceso a ambos escenarios</li>
+                <li>Comida y Bebida</li>
+                <li>Camisa del Evento</li>
+                <li>Acceso VIP</li>
+              </ul>
+            </div>
+  
+            <footer class="pase__footer">
+              <p>$180</p>
+            </footer>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site__footer">
+        <p>Rock &amp; EDM Festival. Todos los derechos reservados</p>
+      </footer>
+
+    <script src="build/js/app.js"></script>
+</body>
+</html>

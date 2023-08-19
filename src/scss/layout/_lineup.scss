@@ -1,0 +1,87 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.bg-amarillo {
+    background-color: v.$amarillo;
+    
+    li:nth-child(odd) {
+        background-color: darken(v.$amarillo, 15%);
+    }
+}
+
+.bg-verde {
+    background-color: v.$verde;
+    li:nth-child(odd) {
+        background-color: darken(v.$verde, 10%);
+    }
+}
+
+.line__up {
+    background-color: v.$rosa;
+
+    h3, p {
+        text-align: center;
+        color: v.$blanco;
+    }
+
+    .fecha__lineup {
+        text-transform: uppercase;
+        margin: 5rem 0;
+    }
+}
+
+.escenarios__contenedor {
+    @include m.tablet {
+        @include m.grid(2, 5rem);
+    }
+
+    p {
+        color: v.$negro;
+    }
+
+    
+}
+
+.escenario {
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+    border-radius: .5rem;
+    @include m.tablet {
+        margin-bottom: 0;
+    }
+    
+    .nombre__escenario {
+        
+        &:after {
+            content: '';
+            display: block;
+            width: 20rem;
+            height: 10rem;
+            background-size: 15rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 2rem auto 0 auto;
+        }
+    }
+}
+
+.rock .nombre__escenario::after {
+    background-image: url(../img/icono_rock.png);
+}
+.edm .nombre__escenario::after {
+    background-image: url(../img/icono_edm.png);
+}
+
+
+.calendario {
+    @include m.resetList;
+
+    li {
+        padding: 2.5rem;
+        font-weight: v.$fw-700;
+
+        span {
+            font-weight: v.$fw-400;
+        }
+    }
+}
